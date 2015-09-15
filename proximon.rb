@@ -13,15 +13,16 @@ module OpenURI
   end
 end
 
+# Capture anything
 get '/*' do
-  url = request.url
-  puts "Pass through for request " + request.url.to_s
+    url = request.url
+    puts "Pass through for request " + request.url.to_s
 
   # Set the content type to whatever was requested
   content_type request.preferred_type.to_s
 
   open(url) do |content|
-    content.read
+     content.read
   end
 end
 
