@@ -13,6 +13,7 @@ module OpenURI
   end
 end
 
+# Capture anything
 get '/*' do
   url = request.url
   puts "Pass through for request " + request.url.to_s
